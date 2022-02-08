@@ -30,8 +30,48 @@ public class Crud {
         return firstInstance;
     }
 
-    public void create() {
+    public static void create(String fileName){
+                 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input Product ID: ");
+        String id = sc.nextLine();
+        System.out.println("Input Quantity: ");
+        String quantity = sc.nextLine();
+        System.out.println("Input Wholesale Price: ");
+        String wholesale = sc.nextLine();
+        System.out.println("Input Sales Price: ");
+        String salesPrice = sc.nextLine();
+        System.out.println("Input Supplier ID: ");
+        String supplierId = sc.nextLine();
+    
+        try{
+        
+          FileWriter writer = new FileWriter(fileName, true);
+          writer.append(id);
+          writer.append(",");
+          writer.append(quantity);
+          writer.append(",");
+          writer.append(wholesale);
+          writer.append(",");
+          writer.append(salesPrice);
+          writer.append(",");
+          writer.append(supplierId);
+          writer.append('\n');
+          writer.close();
+        
+        }
+        
+        catch(IOException writer){
+        
+           System.out.println("IOExcpetion, data maybe incorrect");
+        
+        }
+        
+        sc.close();
+        
     }
+                
+
 
     public void read() {
     }
