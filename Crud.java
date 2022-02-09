@@ -30,7 +30,7 @@ public class Crud {
         return firstInstance;
     }
 
-    public static void create(String fileName){
+    public static void create(String fileName) throws IOException{
                  
         Scanner sc = new Scanner(System.in);
         System.out.println("Input Product ID: ");
@@ -68,12 +68,44 @@ public class Crud {
         }
         
         sc.close();
-        
+
     }
                 
 
 
-    public void read() {
+    public static void read(String fileName) {
+
+        Scanner scan = new Scanner(fileName);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Input Product ID: ");
+        productId = sc.nextLine();
+        
+        
+        while (scan.hasNextLine()){
+
+            String[] row = productId.split(",");
+            if (row[0] = productId){
+
+                for (int x = 0; x < 5; x += 1){
+
+                    return row[x];
+
+                }
+
+            }
+
+        }
+
+
+        
+         
+        while (x = 0){
+
+            
+
+        }
+
     }
 
     public void update() {
