@@ -42,7 +42,7 @@ public class Crud {
 	System.out.println("Input Product ID: ");
         String id = sc.nextLine();
         System.out.println("Input Quantity: ");
-        int quantity = sc.nextLine();
+        int quantity = sc.nextInt();
         System.out.println("Input Wholesale Price: ");
         double wholesale = sc.nextDouble();
         System.out.println("Input Sales Price: ");
