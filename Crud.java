@@ -37,16 +37,30 @@ public class Crud {
      * @param c Database connection to be used
      */
     public void create(Connection c) {
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Input Product ID: ");
         String id = sc.next();
         System.out.println("Input Quantity: ");
         String quantity = sc.next();
+        int quantityValue = Integer.parseInt(quantity);
+        if (quantityValue < 0) {
+        	System.out.println("Not A Valid Input For Quantity");
+        	return;
+        }
         System.out.println("Input Wholesale Price: ");
         String wholesale = sc.next();
+        int wholeSaleValue = Integer.parseInt(wholesale);
+        if (wholeSaleValue < 0) {
+        	System.out.println("Not A Valid Input For Wholesale Price");
+        	return;
+        }
         System.out.println("Input Sales Price: ");
         String salesPrice = sc.next();
+        int salesPriceValue = Integer.parseInt(salesPrice);
+        if(salesPriceValue < 0) {
+        	System.out.println("Invalid Sale Price");
+        	return;
+        }
         System.out.println("Input Supplier ID: ");
         String supplierId = sc.next();
 
@@ -123,10 +137,25 @@ public class Crud {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input new quantity: ");
         String quantity = sc.next();
+        int quantityValue = Integer.parseInt(quantity);
+        if(quantityValue < 0) {
+        	System.out.println("Invalid Quantity Value");
+        	return;
+        }
         System.out.println("Input new wholesale price: ");
         String wholesale = sc.next();
+        int wholesaleValue = Integer.parseInt(wholesale);
+        if(wholesaleValue < 0) {
+        	System.out.println("Invalid Wholesale Price");
+        	return;
+        }
         System.out.println("Input new sales price: ");
         String salesPrice = sc.next();
+        int salePriceValue = Integer.parseInt(salesPrice);
+        if (salePriceValue < 0) {
+        	System.out.println("Invalid Sale Price Value");
+        	return;
+        }
         System.out.println("Input new supplier ID: ");
         String supplierId = sc.next();
 
