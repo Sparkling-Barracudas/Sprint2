@@ -17,7 +17,7 @@ class CrudTest {
 	 */
 	@Test
 	void testCreateMethod() {
-
+		System.out.println("------CreateMethod Test is Running------");
 		Crud crud = Crud.getInstance();
 		Connection c = crud.connect();
 		crud.create(c);
@@ -45,7 +45,7 @@ class CrudTest {
 			e.printStackTrace();
 			System.exit(1);
 		}
-
+		System.out.println("------Test Done------");
 	}
 
 	/**
@@ -54,6 +54,7 @@ class CrudTest {
 	 */
 	@Test
 	void testReadMethod() {
+		System.out.println("------Read Method Test Running------");
 		Crud crud = Crud.getInstance();
 		Connection c = crud.connect();
 		crud.read(c, "5TXAQVSQ1SPS");
@@ -75,6 +76,7 @@ class CrudTest {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		System.out.println("------Test Done------");
 	}
 
 	/**
@@ -84,6 +86,7 @@ class CrudTest {
 	 */
 	@Test
 	void testUpdateMethod() {
+		System.out.println("------Update Method Test Running------");
 		Crud crud = Crud.getInstance();
 		Connection c = crud.connect();
 		crud.update(c, "5TXAQVSQ1SPS");
@@ -111,6 +114,7 @@ class CrudTest {
 			e.printStackTrace();
 			System.exit(1);
 		}
+		System.out.println("------Test Done------");
 	}
 
 	/**
@@ -119,6 +123,7 @@ class CrudTest {
 	 */
 	@Test
 	void testDeleteMethod() {
+		System.out.println("------Delete Test Running------");
 		Crud crud = Crud.getInstance();
 		Connection c = crud.connect();
 		crud.create(c);
@@ -162,6 +167,6 @@ class CrudTest {
 			e.printStackTrace();
 			System.exit(1);
 		}
-
+		System.out.println("------Test Done------");
 	}
 }
